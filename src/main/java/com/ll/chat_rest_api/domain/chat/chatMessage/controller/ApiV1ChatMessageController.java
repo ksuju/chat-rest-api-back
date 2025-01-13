@@ -54,8 +54,6 @@ public class ApiV1ChatMessageController {
                 messageRequest.getWriterName(),
                 messageRequest.getContent());
 
-        System.out.println("chatMessage : " + chatMessage);
-
         // 지정된 채팅방으로 메시지 전송
         simpMessagingTemplate.convertAndSend("/topic/chat/room/" + roomId, chatMessage);
 
